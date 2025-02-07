@@ -149,4 +149,8 @@
   .util_list > li::after {
     content: "";
   }
+
+  .btn_text {
+    font-size: 10gpx;
+  }
 }
