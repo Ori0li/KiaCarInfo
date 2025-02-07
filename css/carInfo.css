@@ -1,0 +1,255 @@
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+#visualInfoBox {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 150px 40px;
+  margin: 0 auto;
+  gap: 35px;
+  justify-content: flex-end;
+}
+.upbox_info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.upbox_title {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.upbox_content {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.downbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.downbox_pricebox {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.downbox_set {
+  display: flex;
+  flex-direction: row;
+}
+.pricebox_set {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+.pricebox_set > h5 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.pricebox_set > span {
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  top: 24px;
+}
+.downbox_set > span {
+  font-size: 15px;
+}
+.downbox_pricebox > button {
+  padding: 16px 24px;
+  background-color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.rightBox {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.rightbox_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  position: relative;
+  bottom: 10px;
+}
+.rightbox_content > img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.rightbox_content > p {
+  line-height: 22px;
+}
+.rightBox > div {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 20px;
+  position: relative;
+  top: 10px;
+  background-color: white;
+  border-radius: 100%;
+  padding: 27px;
+}
+.rightBox > div > i {
+  position: relative;
+  right: 9px;
+  bottom: 9px;
+}
+.divbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.final {
+  opacity: 50%;
+  position: relative;
+  bottom: 30px;
+}
+.final_img {
+  position: absolute;
+  margin-left: 4px;
+}
+#backgroundImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+.imgSet {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1160px) {
+  .pricebox_set > span {
+    width: 45px;
+  }
+  .downbox_pricebox {
+    flex-direction: column;
+    width: 105px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  #visualInfoBox {
+    padding-left: 16px;
+  }
+  .downbox_pricebox {
+    flex-direction: row;
+    width: 105px;
+  }
+  .divbox {
+    flex-direction: column;
+  }
+  .downbox_pricebox {
+    width: fit-content;
+    gap: 90px;
+  }
+  .downbox_pricebox > button {
+    width: 105px;
+  }
+  .upbox_title {
+    font-size: 34px;
+  }
+  .upbox_content {
+    font-size: 11px;
+  }
+  .pricebox_set {
+    height: fit-content;
+    flex-direction: row;
+  }
+  .pricebox_set > h5 {
+    font-size: 24px;
+  }
+  .pricebox_set > span {
+    font-size: 14px;
+    font-weight: 300;
+    top: 8px;
+  }
+  .downbox_info {
+    font-size: 12px;
+    position: relative;
+    bottom: 16px;
+  }
+  .final {
+    bottom: 80px;
+    font-size: 12px;
+  }
+  .final_img {
+    width: 16px;
+    height: 16px;
+  }
+  .rightBox {
+    position: relative;
+    top: 50px;
+    font-size: 14px;
+  }
+  .rightBox > img {
+    position: absolute;
+    bottom: 105px;
+    margin-left: 93%;
+  }
+  .rightbox_content {
+    width: 160px;
+    text-align: left;
+  }
+  .rightbox_content > img {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    height: 110vh;
+  }
+  #visualInfoBox {
+    height: 110vh;
+  }
+  #visualInfoBox {
+    justify-content: flex-start;
+    padding-top: 0px;
+  }
+  .upbox_info {
+    height: 90%;
+    justify-content: space-between;
+  }
+  .downbox_pricebox {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .downbox_pricebox > button {
+    padding: 12px;
+    background-color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .downbox_info {
+    bottom: 80px;
+  }
+  .rightBox {
+    top: 30px;
+  }
+  .rightbox_content {
+    display: none;
+  }
+  .final {
+    bottom: 40px;
+    font-size: 12px;
+  }
+}

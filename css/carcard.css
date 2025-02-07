@@ -1,0 +1,152 @@
+.cardBox {
+  position: relative;
+}
+
+.car_card_box {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 0 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.car_card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  padding: 55px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transition: all 0.6s;
+}
+
+.secondImg {
+  display: none;
+}
+
+.car_card:hover {
+  border-radius: 15px;
+  background-color: #f8f8f8;
+}
+
+.car_card > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.car_name {
+  margin-top: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+.car_price {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  color: #5f6563;
+}
+
+.util_list {
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #05141f;
+  color: #e6e6e6;
+
+  position: sticky;
+  bottom: 15px;
+}
+
+.util_list > li {
+  display: flex;
+
+  font-size: 15px;
+  gap: 10px;
+  padding: 20px 30px;
+}
+
+.util_list > li > img {
+  width: 18px;
+  height: 18px;
+}
+
+.util_list > li::after {
+  content: "|";
+  margin-left: 50px;
+  color: #65636d;
+}
+
+.util_list > li:last-child::after {
+  content: "";
+  margin-left: 0px;
+}
+
+.view_btn {
+  display: none;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin: 25px;
+}
+.btn_text {
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: inherit;
+  border: none;
+}
+.arrow_icon {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1025px) {
+  .car_card_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .util_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    margin-bottom: 0px;
+    padding: 0px;
+    border-top: 1px solid #65636d;
+    border-bottom: 1px solid #65636d;
+    border-left: 1px solid #65636d;
+    position: sticky;
+    bottom: 0px;
+  }
+  .util_list > li {
+    height: fit-content;
+    border-right: 1px solid #65636d;
+    border-bottom: 1px solid #65636d;
+  }
+  .util_list > li:last-child {
+    height: fit-content;
+    border-right: 1px solid #65636d;
+    border-bottom: none;
+  }
+  .util_list > li::after {
+    content: "";
+  }
+}

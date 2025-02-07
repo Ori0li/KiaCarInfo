@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "kia";
+  src: url(../common/text/KIA_Medium.ttf);
+}
+
+* {
+  font-family: "kia";
+}
+
+.main_list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+  font-size: 18px;
+  align-items: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.first_list {
+  display: flex;
+  gap: 40px;
+}
+.first_list > li {
+  font-weight: 600;
+}
+
+.main_list > a > img {
+  width: 75px;
+  height: 75px;
+  margin-right: 250px;
+}
+
+.second_list {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 35px;
+  align-items: center;
+}
+
+.hight-light {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.languageMenu {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+
+.menu_bar {
+  display: none;
+  position: absolute;
+  right: 180px;
+  top: 60px;
+  padding: 3px;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menu_bar > li {
+  padding: 20px;
+  color: black;
+}
+
+.menu_bar > li:hover {
+  background-color: black;
+  color: white;
+}
+
+.hidden_icon {
+  display: none;
+  gap: 20px;
+  align-items: center;
+}
+.hidden_icon > img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1025px) {
+  .main_list {
+    margin-bottom: 0px;
+  }
+  .first_list {
+    display: none;
+  }
+  .second_list {
+    display: none;
+  }
+  .hidden_icon {
+    display: flex;
+  }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ori0li.github.io/KiaCarInfo/" />
+    <meta property="og:title" content="KIA CarInfo Page" />
+    <meta
+      property="og:image"
+      content="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202310/kv_used_car_pc.png"
+    />
+    <meta property="og:description" content="Javascript 3조 팀프로젝트" />
+    <!-- 다음의 태그는 필수는 아니지만, 포함하는 것을 추천함 -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <title>KIA</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/menubar.css" />
+    <link rel="stylesheet" href="./css/carcard.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header class="main_list"></header>
+
+    <section class="bottom_line">
+      <ul class="car_list">
+        <li id="EV">EV</li>
+        <li id="SD">승용</li>
+        <li id="RV">RV</li>
+        <li id="CARGO">택시 & 버스 & 상용</li>
+      </ul>
+    </section>
+
+    <section class="cardBox">
+      <div class="car_card_box"></div>
+      <ul class="util_list">
+        <li>
+          <img
+            src="https://www.kia.com/content/dam/kwp/functional/icon_Ev.svg"
+            alt=""
+          />
+          <p>Kia EV 가이드</p>
+        </li>
+        <li>
+          <img
+            src="https://www.kia.com/content/dam/kwp/functional/icon_FindMatch.svg"
+            alt=""
+          />
+          <p>상세 모델 검색</p>
+        </li>
+        <li>
+          <img
+            src="https://www.kia.com/content/dam/kwp/functional/icon_Dictionary.svg
+            "
+            alt=""
+          />
+          <p>경쟁 모델 비교</p>
+        </li>
+        <li>
+          <img
+            src="https://www.kia.com/content/dam/kwp/functional/icon_Support.svg
+            "
+            alt=""
+          />
+          <p>사양 설명서</p>
+        </li>
+        <li>
+          <img
+            src="https://www.kia.com/content/dam/kwp/functional/icon_Calculator.svg"
+            alt=""
+          />
+          <p>카탈로그/가격표</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="info_page">
+      <div class="info_box">
+        <section class="info_img">
+          <img
+            src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/logo_w.svg"
+            alt=""
+          />
+        </section>
+        <article class="first_box">
+          <figure class="left_box">
+            <ul class="left_list">
+              <li>판매 네트워크</li>
+              <li>견적 내기</li>
+              <li>구매 상담 신청</li>
+              <li>시승 신청</li>
+              <li>기아렌터카</li>
+            </ul>
+            <ul class="right_list">
+              <li>New Kia</li>
+              <li>공지사항</li>
+              <li>뉴스</li>
+              <li>IR</li>
+              <li>채용</li>
+            </ul>
+          </figure>
+          <figure class="right_box">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAAAUCAMAAABbPPhuAAAAV1BMVEVHcEz///////////////////////////////////////////////////////////////////////////////////////////////////////////////8egqRXAAAAHHRSTlMARPsOTK4yAQUKXIQamcQhO5Btz3gppOq59RPciMyZ6AAAAnlJREFUSMftlWuvpCAMhkWBcr8JiJf//zu3qDPj2ZycZJP9ssk2cYAX7EMrdIbhv/3TJqT4DEBOl0kYflfhNRBwtfCNNxDwI8yryN+jjbBl2Zd1Xe32WTMFi9ISrlGJ2fSWtvCNP57DD7yJsNW9cJLHZVxYYuNxMPPZUJpROEZ6O2wzQY+SLfQbh8GSH3BqP44bJ0qaj9Vl7+sDBxupy7iODxzbM4Ye5p0OshBSJHhTKNkMIR6CVYFy2VNCcSh9CUF6ckoD1OPGgaFsHfcYxPDEiZJnDLitD5xlloPQ0VERYq2RyBS1bTlbpk1AoTIFUtVasy86xlxitbFnHtiNkyHu4zGrCcUHbqJsWWdd8vLGAbe5KlkacdRo7U3WXjs1pT0ZWkNg0W+pGd7oxKPiNRZR0C/nH5zgesb9H+dHeeCKxtAsmSAtz+hUij5H4yhnLOfKuI7bQJzHKRoshcG7oHadNdOYWzFM2CHyjSOqLeOO0Y2u8144qdo6uuRhOHHrG0d5TYxsHWdTSgqDnAbSzIVDFwZdzjiTCCp4zfD0M/rCLW3vMaj5uHg3jtsuh57ejhtfhwc9TNrVDXE+5k1uRj5xLE0DdZ64IKUxJ07iYYpR3LhxXJsyQtKbd+Kcdit+S3Pd6LTsucAbJ8isBOKkYjpFtX3BNZ2bFltkKUdSOq5gDlrqr+cZzeXSMytIw74tW3bY4hNPueOUPqM8zSsOE+5DpoLXNmXlBaVyKBiVV8WEoLIyeNJVTmQyuHiQNGe6XRWsm3iVp24Alyg/xQ3EszT1PtzlCmdwVX9AXFNwL77aq6Z93ge0Z8mDt/p14o8MHr8vf///nP6u/QLwTi6NBafAEwAAAABJRU5ErkJggg=="
+              alt=""
+            />
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0VDOTAzN0Y3MzVGMTFFQ0FGQTdEM0ZGNTYzQkVEQjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0VDOTAzODA3MzVGMTFFQ0FGQTdEM0ZGNTYzQkVEQjMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozRUM5MDM3RDczNUYxMUVDQUZBN0QzRkY1NjNCRURCMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozRUM5MDM3RTczNUYxMUVDQUZBN0QzRkY1NjNCRURCMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Prh6/3sAAAOvSURBVHjadFRZTxtXFM7M3PF4jwcb7zE0iaAUakxNIXGCHNI2S6VIaRX1oVJ/V9/60L70pQ+VKiSUiqZpWAIOmNrG4BpsYzAY8DYz3j3jfsQoQkp7LUsj+5x7vvMtQ7GWgSvvHer8S13+pdvtvl9G/qOToui3p3dLF40KPhfnf5vRxjB0H8+PDN10OR06rQbV1Vr99Kywl9lPZ7LvmqneeQebpim1Wj1za8put+2m0pis1WgEQTzKn4iSNPrh8MA1169z84Io4QqVSmXQ6y6aUWo0GGZnAvijVqu7XfZGs6VSsaIoFUuV5dWQrMjYBrgYhtFptI+/mHXabaSHQa/TPfr8XiqTddqtU37f0mpIUboWM49SjmOxuiwrLKH7zebg3Vsel8vnHY3E4hfNn37iw2Kmq8b86RkmA9Vx/mR9M1JvNDgVi5rrgx7eZHp4Pzg6MhTd2mFZVsVxBJ19vMnjdsZ3Ev6J8fR+lqboldA67urda7WYfd6xO9OTNqvF5XA0W61iubx/cHhyekawLbgNhf9utVqx+I7dZn3xarlUrhDCgIXJifFJnxdob94YvPHB4HYiSdFUuSL89PMv6Cc0RfG8KZ5IVgQBl6ENM/U6rd/n/Wh4KDDlNxoNh7njZrMVjkTDka3FlbVkKo3idrtDoH6n01EUpdORRakKPbFe8M7twPQk3AHZ6vU6z1/diETn5heO8vlCqQTy/OMf547zBBWrbzaq1RqIBWEP7ge/ffaUJYRlSTi6JYpi9jD3/I+//lxcbjSahKD+3BRqjRqcETwLYhXV3z17+s1XTzajcXMfD/BvQhtzzxfACCQBIkADr/fuBtbWw7V6vd1uQwjSZzLNBgOcSvX1k8dOhy0cieWO8qB0O7GbSO4VikUIjlHAZbf2D3hcYyPDoCq2nZCkKoFXvnzwWblSgSoACZJfray+XHod2YqDkp5zcbXb6Zi5Pd1udYqt0lmhCMPCDmTgmhsGBsN2q/VFJLbwcjG0vtmWO3AfTTMIlFarJQyBN2iGdjntUKssCEfHeaSNYBlom0ylvv/hx6XXa8gQ7A2Foa3RqGcYotWo2x150OPut5gRLIw5OMxVBPF8lyucYTeV+W3+9/jOPwjchHdMlmVJkhBhjuMQhmazCXqQsNNCAXTAEZnsAUae+09juw5CFFmB+6EERAZg9FdrNVAFtvV6HdKnUauRzd29NCZ3ZPki1ZdfQ29fBkyvFDkzGPRqTlWrNwAS8iCeMEz30ivpXwEGAPnOBc19MFPeAAAAAElFTkSuQmCC"
+              alt=""
+            />
+            <img
+              src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMC4xMjIiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMC4xMjIgMjAiPgogICAgPHBhdGggZGF0YS1uYW1lPSLtjKjsiqQgODgiIGQ9Ik0yMC4xMjIgMTAuMDYxQTEwLjA2MSAxMC4wNjEgMCAxIDAgOC40ODkgMjB2LTcuMDMxSDUuOTM0di0yLjkwOGgyLjU1NVY3Ljg0NWEzLjU1IDMuNTUgMCAwIDEgMy44LTMuOTE0IDE1LjQ3OSAxNS40NzkgMCAwIDEgMi4yNTIuMlY2LjZoLTEuMjY4YTEuNDU0IDEuNDU0IDAgMCAwLTEuNjQgMS41NzJ2MS44ODZoMi43OWwtLjQ0NiAyLjkwOGgtMi4zNDRWMjBhMTAuMDY0IDEwLjA2NCAwIDAgMCA4LjQ4OS05LjkzOXoiIHN0eWxlPSJmaWxsOiNmZmYiLz4KPC9zdmc+Cg=="
+              alt=""
+            />
+            <img
+              src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMC4wMDIiIHZpZXdCb3g9IjAgMCAyMCAyMC4wMDIiPgogICAgPHBhdGggZGF0YS1uYW1lPSLtjKjsiqQgODkiIGQ9Ik0xMC42NDQgMS44YzIuNjcgMCAyLjk4Ni4wMSA0LjA0MS4wNThhNS41MzUgNS41MzUgMCAwIDEgMS44NTcuMzQ0IDMuMSAzLjEgMCAwIDEgMS4xNTEuNzQ4IDMuMSAzLjEgMCAwIDEgLjc0OSAxLjE1IDUuNTM1IDUuNTM1IDAgMCAxIC4zNDQgMS44NTdjLjA0OCAxLjA1NS4wNTggMS4zNzEuMDU4IDQuMDQxcy0uMDEgMi45ODYtLjA1OCA0LjA0MWE1LjUzNCA1LjUzNCAwIDAgMS0uMzQ0IDEuODU3IDMuMzE1IDMuMzE1IDAgMCAxLTEuOSAxLjkgNS41MzUgNS41MzUgMCAwIDEtMS44NTcuMzQ0Yy0xLjA1NC4wNDgtMS4zNzEuMDU4LTQuMDQxLjA1OHMtMi45ODctLjAxLTQuMDQxLS4wNThhNS41MzUgNS41MzUgMCAwIDEtMS44NTUtLjM0IDMuMSAzLjEgMCAwIDEtMS4xNDgtLjc1MSAzLjEgMy4xIDAgMCAxLS43NTEtMS4xNDkgNS41MzUgNS41MzUgMCAwIDEtLjM0OS0xLjg1OWMtLjA0My0xLjA1NS0uMDU0LTEuMzcxLS4wNTQtNC4wNDFzLjAxLTIuOTg2LjA1OC00LjA0MUE1LjUzNSA1LjUzNSAwIDAgMSAyLjg0OSA0LjEgMy4xIDMuMSAwIDAgMSAzLjYgMi45NTEgMy4xIDMuMSAwIDAgMSA0Ljc0OCAyLjJhNS41MzUgNS41MzUgMCAwIDEgMS44NTctLjM0NEM3LjY2IDEuODEgNy45NzYgMS44IDEwLjY0NiAxLjh6bTAtMS44QzcuOTMgMCA3LjU5LjAxIDYuNTIzLjA1OGE3LjMzOCA3LjMzOCAwIDAgMC0yLjQyOC40NjYgNC45MDkgNC45MDkgMCAwIDAtMS43NzIgMS4xNTRBNC45MDkgNC45MDkgMCAwIDAgMS4xNjkgMy40NSA3LjM0IDcuMzQgMCAwIDAgLjcgNS44NzdDLjY1NiA2Ljk0Mi42NDUgNy4yODQuNjQ1IDEwcy4wMTIgMy4wNTcuMDYgNC4xMjNhNy4zMzIgNy4zMzIgMCAwIDAgLjQ2NCAyLjQyNiA0LjkwOSA0LjkwOSAwIDAgMCAxLjE1NCAxLjc3MSA0LjkgNC45IDAgMCAwIDEuNzcyIDEuMTU0IDcuMzI5IDcuMzI5IDAgMCAwIDIuNDI3LjQ2NWMxLjA2NC4wNDggMS40MDcuMDYgNC4xMjMuMDZzMy4wNTctLjAxMSA0LjEyMy0uMDZhNy4zMTUgNy4zMTUgMCAwIDAgMi40MjYtLjQ2NSA1LjExIDUuMTEgMCAwIDAgMi45MjUtMi45MjUgNy4zMzEgNy4zMzEgMCAwIDAgLjQ2NS0yLjQyN2MuMDQ4LTEuMDY0LjA2LTEuNDA3LjA2LTQuMTIzcy0uMDEyLTMuMDU3LS4wNi00LjEyM2E3LjMxOCA3LjMxOCAwIDAgMC0uNDY1LTIuNDI2IDQuOSA0LjkgMCAwIDAtMS4xNTMtMS43NzFBNC45MSA0LjkxIDAgMCAwIDE3LjE5NC41MjQgNy4zNCA3LjM0IDAgMCAwIDE0Ljc2Ny4wNkMxMy43LjAxMiAxMy4zNjEgMCAxMC42NDQgMHptMCA0Ljg2N2E1LjEzNCA1LjEzNCAwIDEgMCAxLjk2NS4zOTEgNS4xMzUgNS4xMzUgMCAwIDAtMS45NjUtLjM5M3ptMCA4LjQ2OUEzLjMzNCAzLjMzNCAwIDEgMSAxMyAxMi4zNTdhMy4zMzQgMy4zMzQgMCAwIDEtMi4zNTYuOTc3em02LjUzOS04LjY3MmExLjIgMS4yIDAgMSAxLTEuMi0xLjIgMS4yIDEuMiAwIDAgMSAxLjIgMS4xOTh6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtLjY0NSAuMDAyKSIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2ZpbGw6I2ZmZiIvPgo8L3N2Zz4K"
+              alt=""
+            />
+            <img
+              src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNi4xODkiIGhlaWdodD0iMTguMzQyIiB2aWV3Qm94PSIwIDAgMjYuMTg5IDE4LjM0MiI+CiAgICA8cGF0aCBkYXRhLW5hbWU9Iu2MqOyKpCA5MCIgZD0iTTI2LjI4OCAzLjY5NGEzLjI4MyAzLjI4MyAwIDAgMC0yLjMxNS0yLjMxNUMyMS45MjkuODIzIDEzLjczOS44MjMgMTMuNzM5LjgyM3MtOC4xOTIgMC0xMC4yMzIuNTQ4YTMuMjc5IDMuMjc5IDAgMCAwLTIuMzE1IDIuMzIzQTM0LjA1NyAzNC4wNTcgMCAwIDAgLjY0NSAxMGEzNC4wNTcgMzQuMDU3IDAgMCAwIC41NDggNi4zIDMuMjc5IDMuMjc5IDAgMCAwIDIuMzE1IDIuMzE1YzIuMDQyLjU0OCAxMC4yMzIuNTQ4IDEwLjIzMi41NDhzOC4xOTIgMCAxMC4yMzQtLjU0OGEzLjI4MyAzLjI4MyAwIDAgMCAyLjMxNC0yLjMxNSAzNC4xODUgMzQuMTg1IDAgMCAwIC41NDUtNi4zIDM0LjggMzQuOCAwIDAgMC0uNTQ1LTYuMzA2ek0xMS4xMiAxMy45MjZWNi4wN0wxNy45MjQgMTB6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtLjY0NSAtLjgyMikiIHN0eWxlPSJmaWxsOiNmZmYiLz4KPC9zdmc+Cg=="
+              alt=""
+            />
+          </figure>
+        </article>
+        <section class="home_section">
+          <div class="home_btn">
+            <img
+              src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/icon_home_1.svg"
+              alt=""
+            />
+            <p>홈</p>
+          </div>
+          <div class="change_language">
+            <p>
+              <img
+                src="https://www.kia.com/content/dam/kwp/descriptive/global_footer_kor.svg"
+                alt=""
+              />한국
+            </p>
+            <button class="link_btn">
+              <span>family Site</span>
+              <div></div>
+            </button>
+          </div>
+        </section>
+
+        <article class="hidden_site">
+          <ul class="site_list">
+            <li>SNS</li>
+            <div></div>
+          </ul>
+          <ul class="site_list">
+            <li>Family Site</li>
+            <div></div>
+          </ul>
+        </article>
+
+        <sectrion class="buttons">
+          <span>© Kia Corp. All rights reserved</span>
+          <ul class="pill_button">
+            <li>개인정보 처리방침</li>
+            <li>프라이버시 센터</li>
+            <li>이용약관</li>
+            <li>윤리경영 사이버감사실</li>
+            <li>전자공고</li>
+            <li>사이트맵</li>
+          </ul>
+        </sectrion>
+
+        <ul class="logo_list">
+          <li>
+            <img
+              src="https://www.kia.com/content/dam/kwp/kr/ko/common/awards_nsci.png"
+              alt=""
+            />23년 국가고객만족도(NCSI)<br />
+            경형승용(9년연속), 중형승용(4년연속)<br />
+            컴팩트RV, 대형RV 1위
+          </li>
+          <li>
+            <img
+              src="https://www.kia.com/content/dam/kwp/kr/ko/common/awards_ksqi-callcenter.png"
+              alt=""
+            />24년 한국 산업의 서비스 품질지수<br />
+            우수 콜센터 선정 (21년 연속)
+          </li>
+          <li>
+            <img
+              src="https://www.kia.com/content/dam/kwp/kr/ko/common/awards_ksqi-car.png"
+              alt=""
+            />24년 한국산업의 서비스 품질지수<br />
+            자동차 A/S부문 1위 (11년 연속)
+          </li>
+          <li>
+            <img
+              src="https://www.kia.com/content/dam/kwp/kr/ko/common/awards-cnba.png"
+              alt=""
+            />24년 대한민국 국가브랜드 대상<br />
+            자동차 멤버십 부문 1위 (13년 연속)
+          </li>
+          <li>
+            <img
+              src="https://www.kia.com/content/dam/kwp/kr/ko/common/awards_ks-sqi.png"
+              alt=""
+            />23년 한국서비스품질지수(KS-SQI)<br />
+            자동차 판매서비스 부문 1위 (4년 연속)
+          </li>
+          <li>
+            <img
+              src="https://www.kia.com/content/dam/kwp/kr/ko/common/awards_wa.png"
+              alt=""
+            />웹 접근성 품질인증
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
